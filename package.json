@@ -1,0 +1,28 @@
+{
+  "name": "lorenze",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "copy:img": "copyfiles -u 1 ./src/assets/img/* public",
+    "watch:img": "onchange \"src/assets/img/*\" -- npm run copy:img",
+    "tailwind": "npx tailwindcss -i ./src/assets/css/core.css -o ./public/assets/css/styles.css",
+    "watch:css": "npx tailwindcss -i ./src/assets/css/core.css -o ./public/assets/css/styles.css --watch",
+    "panini": "panini --root=src/pages --layouts=src/layouts --partials=src/partials --data=src/data --output=public \"src/pages/**/*.html\"",
+    "watch:html": "onchange \"src/**/*.{html,json}\" -- npm run panini",
+    "serve": "browser-sync start --server public --files public",
+    "start": "npm-run-all --parallel panini copy:img serve watch:*",
+    "build": "npm-run-all panini tailwind copy:img"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.11",
+    "copyfiles": "^2.4.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "panini": "^1.7.2",
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "tailwindcss": "^3.2.4"
+  }
+}

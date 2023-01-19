@@ -1,0 +1,12 @@
+[
+    {
+        "icon": "../assets/img/cyber-security.svg",
+        "title": "Escritura pública",
+        "description": "O tabelião lavra o documento que tokenizará o ativo desejado"
+    },
+    {
+        "icon": "../assets/img/cyber-security.svg",
+        "title": "Dados da operação",
+        "description": "Em seguida o cartório informa os dados da obrigação que vai ser tokenizada: elementos da escritura, do bem. das partes, quantidade valor dos tokens e das regras do negócio"
+    }
+]

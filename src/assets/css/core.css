@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.devr { 
+    outline: 1px solid;
+    @apply outline-red-500 relative;
+}
+.devb { 
+    outline: 1px solid;
+    @apply outline-blue-500 relative;
+}
+.devg { 
+    outline: 1px solid;
+    @apply outline-green-500 relative;
+}
+
+@media (min-width: 360px) {}
+@media (min-width: 640px) {}
+@media (min-width: 768px) {}
+@media (min-width: 1024px) {}
+@media (min-width: 1280px) {}
+@media (min-width: 1536px) {}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+section {
+    scroll-margin-top: 66px;
+}
+
+.accordion-content {
+    overflow: hidden;
+    height: 0;
+    transition: all .25s ease;
+}
+  
+
+.embla {
+    overflow: hidden;
+}
+.embla h4::before {
+    content: counter(embla) ". ";
+}
+.embla-container {
+    display: flex;
+}
+.embla-slide {
+    flex: 0 0 100%;
+    max-width: 300px;
+    counter-increment: embla;
+}
+
+@media (min-width: 1024px) {
+    .embla-slide {
+        max-width: 384px;
+    }
+}
